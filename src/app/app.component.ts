@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
     constructor(private router: Router) {
         let path: string = window.location.hash;
+        console.log('path', path, this.router);
         if (path && path.length > 0) {
             this.router.navigate([path.substr(2)]);
         }
-        console.log('path', path, this.router);
     }
 
     public ngOnInit() { }
