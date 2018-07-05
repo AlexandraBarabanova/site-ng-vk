@@ -17,11 +17,10 @@ export class AppService {
         constructor(private http: Http) {}
         public getFriends(): Promise<any> {
             const headers = new Headers();
-            headers.append('Access-Control-Allow-Headers', 'Content-Type');
-            headers.append('Access-Control-Allow-Methods', 'GET');
-            headers.append('Access-Control-Allow-Origin', '*');
-            return this.http.get('https://api.vk.com/method/users.get?user_id=' + localStorage.getItem('user_id') +
-                                        '&v=5.52&access_token=' + localStorage.getItem('access_token'), {headers: headers})
+            headers.append(':method', 'GET');
+            headers.append(':path', '/method/friends.getOnline?v=5.52&access_token=35c9e33d5a4c871e7294da17d0fe100966cae076b11e2c5f0de79883e1f4f76b196d66eb65b14fedf6887');
+            headers.append(':scheme', 'https');
+            return this.http.get('/method/friends.getOnline?v=5.52&access_token=35c9e33d5a4c871e7294da17d0fe100966cae076b11e2c5f0de79883e1f4f76b196d66eb65b14fedf6887', {headers: headers})
                 .toPromise()
                 .then(res => res.json().data)
                 .then(frined => this.frined = frined)
