@@ -7,29 +7,29 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FriendsComponent } from './friends/friends.component';
 import { LoginComponent } from "./login/login.component";
-import { AppRoutingModule} from "./app-routing.module";
-import { FriendsRoutingModule } from "./friends/friends-routing.module";
-import { LoginRoutingModule } from "./login/login-routing.module";
+// import { AppRoutingModule} from "./app-routing.module";
+// import { FriendsRoutingModule } from "./friends/friends-routing.module";
+// import { LoginRoutingModule } from "./login/login-routing.module";
 import { AppService} from "./shared/app.service";
 
-// const appRoutes: Routes = [
-//     { path: '', redirectTo: '/login', pathMatch: 'full'},
-//     { path: 'login', component: LoginComponent},
-//     { path: 'friends', component: FriendsComponent}
-// ];
+const appRoutes: Routes = [
+    { path: '', redirectTo: '/login', pathMatch: 'full'},
+    { path: 'login', component: LoginComponent},
+    { path: 'friends', component: FriendsComponent}
+];
 
 @NgModule({
   declarations: [
       AppComponent,
-      // FriendsComponent,
-      // LoginComponent
+      FriendsComponent,
+      LoginComponent
   ],
   imports: [
       BrowserModule,
-      RouterModule,
-      AppRoutingModule,
-      FriendsRoutingModule,
-      LoginRoutingModule,
+      RouterModule.forRoot(appRoutes),
+      // AppRoutingModule,
+      // FriendsRoutingModule,
+      // LoginRoutingModule,
       HttpModule,
       HttpClientModule
   ],
