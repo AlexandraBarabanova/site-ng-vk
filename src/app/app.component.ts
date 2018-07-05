@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent implements OnInit {
+    path_exit: string = '';
     constructor(private router: Router) {
         const access_token: string = '#access_token=';
         const user_id: string = 'user_id=';
@@ -20,11 +21,21 @@ export class AppComponent implements OnInit {
         }
         if (localStorage.getItem('access_token') && localStorage.getItem('user_id')) {
             path = '#/friends';
+        } else {
+            path = '#/login';
         }
+        this.path_exit = path;
         console.log('test', localStorage.getItem('access_token'), localStorage.getItem('user_id'));
         if (path && path.length > 0) {
             this.router.navigate([path.substr(2)]);
         }
+    }
+    
+    exitApp(): void {
+        localStorage.setItem('access_token', null);
+        localStorage.setItem('user_id', null);
+        let path = '#/login';
+        this.router.navigate([path.substr(2)]);
     }
 
     public ngOnInit() { }
