@@ -21,8 +21,8 @@ import { AppService} from "./shared/app.service";
 @NgModule({
   declarations: [
       AppComponent,
-      FriendsComponent,
-      LoginComponent
+      // FriendsComponent,
+      // LoginComponent
   ],
   imports: [
       BrowserModule,
