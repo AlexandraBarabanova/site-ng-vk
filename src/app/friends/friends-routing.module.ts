@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FriendsComponent} from "./friends.component";
 
 const routes: Routes = [
-  {   path: 'friends', component: FriendsComponent, pathMatch: 'prefix'}
+  {   path: 'friends', component: FriendsComponent}
 ];
 
 @NgModule({

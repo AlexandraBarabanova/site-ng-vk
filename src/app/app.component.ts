@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
         if (path && path.length > 0) {
             this.router.navigate([path.substr(2)]);
         }
+        console.log('path', path, this.router);
     }
 
     public ngOnInit() { }

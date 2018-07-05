@@ -15,7 +15,7 @@ import { AppService} from "./shared/app.service";
 const appRoutes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full'},
     { path: 'login', component: LoginComponent},
-    { path: 'friends', component: FriendsComponent, pathMatch: 'prefix'}
+    { path: 'friends', component: FriendsComponent}
 ];
 
 @NgModule({
