@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   ],
   imports: [
       BrowserModule,
-      RouterModule.forRoot(appRoutes, ),
+      RouterModule.forRoot(appRoutes),
       // AppRoutingModule,
       // FriendsRoutingModule,
       // LoginRoutingModule,
