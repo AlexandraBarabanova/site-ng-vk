@@ -1,0 +1,13 @@
+<div class="row justify-content-md-center">
+    <div class="panel panel-default col-lg-8">
+        <div class="show-style col-lg-12" *ngFor="let friend of friendItems">
+            <img [src]="friend.photo" class="edit-photo">
+            <div class="edit-name">
+                {{friend.name + "   " + friend.surname}}
+                <br>
+                <div class="edit-about">{{friend.about}}</div>
+            </div>
+            <div class="edit-delete"> <a>X</a></div>
+        </div>
+    </div>
+</div>

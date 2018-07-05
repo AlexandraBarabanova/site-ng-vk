@@ -1,0 +1,47 @@
+.edit-photo {
+    margin-top: 20px;
+    float: left;
+    width: 130px;
+    height: 130px;
+    border: rgba(0, 0, 0, 0.32);
+    border-style: groove;
+    border-width: 1px;
+    border-radius: 70px;
+    cursor: pointer;
+}
+
+.show-style {
+    border-bottom: rgba(0, 0, 0, 0.18);
+    border-bottom-style: double;
+    border-bottom-width: 1px;
+    padding-bottom: 20px;
+}
+
+.edit-name {
+    float: left;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.edit-about {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgba(177, 170, 170, 0.72);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.edit-delete > a {
+    float: right;
+    margin-top: 20px;
+    color: white!important;
+}
+
+.edit-delete > a:hover {
+    float: right;
+    margin-top: 20px;
+    color: black!important;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="position-alert" style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="alert alert-primary col col-lg-12" id="alert-style" role="alert">
+                Authorization with the help of VK.
+                <hr>
+                <!--<a href="https://oauth.vk.com/authorize?client_id=6622364&display=page&redirect_uri=http://site-ng-vk-oauth.tk/friends&scope=friends&response_type=token&v=5.52">-->
+                    <button type="submit" class="btn btn-primary" (click)="authorizationVK()" [routerLink]="'/friends'">
+                        <span> Authorization </span>
+                    </button>
+                <!--</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<!--cefb84567318c602978bdcd1b33d2c80490ad8e746a646b5172e095c7b55a275c1d567b1765aebe01cd6d-->
+<!--90235732-->

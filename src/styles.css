@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('assets\depositphotos_106230918-stock-photo-square-background-from-yellow-crumpled.jpg'); /* Путь к фоновому изображению */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-attachment:fixed;
+    background-size: 100%;
+}

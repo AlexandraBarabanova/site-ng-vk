@@ -1,0 +1,19 @@
+#width-style > .jumbotron {
+    padding-left: 15%!important;
+    border-bottom: rgba(181, 181, 181, 0.22) groove 1px;
+    border-top: rgba(181, 181, 181, 0.22) groove 1px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    background-color: rgba(250, 235, 215, 0.58);
+}
+#width-style > .jumbotron > h1 {
+    font-family: cursive;
+    margin-bottom: 20px;
+    font-size: 63px;
+}
+
+#width-style > .jumbotron > p {
+    font-size: 17px;
+    margin-left: 10px;
+    color: rgba(177, 170, 170, 1);
+}

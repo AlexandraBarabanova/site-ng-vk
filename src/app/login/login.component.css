@@ -1,0 +1,12 @@
+.position-alert {
+    margin-top: 5%;
+}
+.position-alert > h1 {
+    font-family: cursive;
+    font-size: 36px;
+    margin-bottom: 2%;
+}
+
+#alert-style.alert-primary {
+    background-color: rgba(204, 229, 255, 0.45);;
+}
