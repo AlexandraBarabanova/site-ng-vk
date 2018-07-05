@@ -18,6 +18,9 @@ export class AppComponent implements OnInit {
             localStorage.setItem('user_id', path.substring(path.indexOf(user_id)+user_id.length, path.length));
             path = '#/friends';
         }
+        if (localStorage.getItem('access_token') && localStorage.getItem('user_id')) {
+            path = '#/friends';
+        }
         console.log('test', localStorage.getItem('access_token'), localStorage.getItem('user_id'));
         if (path && path.length > 0) {
             this.router.navigate([path.substr(2)]);
