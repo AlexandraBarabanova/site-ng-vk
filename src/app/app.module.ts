@@ -21,8 +21,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
       AppComponent,
-      // FriendsComponent,
-      // LoginComponent
+      FriendsComponent,
+      LoginComponent
   ],
   imports: [
       BrowserModule,
