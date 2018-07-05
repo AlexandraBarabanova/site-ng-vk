@@ -12,7 +12,8 @@ export class AppComponent implements OnInit {
         const access_token: string = '#access_token=';
         const user_id: string = 'user_id=';
         let path: string = window.location.hash;
-        if (path.indexOf(access_token)) {
+        console.log(path);
+        if (path.indexOf(access_token) !== -1) {
             localStorage.setItem('access_token', path.substring(path.indexOf(access_token)+access_token.length, path.indexOf('&')));
             localStorage.setItem('user_id', path.substring(path.indexOf(user_id)+user_id.length, path.length));
             path = '#/friends';
