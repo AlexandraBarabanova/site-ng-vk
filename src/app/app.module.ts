@@ -33,6 +33,7 @@ const appRoutes: Routes = [
       HttpModule,
       HttpClientModule
   ],
+  exports: [RouterModule],
   providers: [AppService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
