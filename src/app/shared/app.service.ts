@@ -21,7 +21,7 @@ export class AppService {
             // headers.append('Access-Control-Allow-Headers', 'Content-Type');
             // headers.append('Content-Type', 'application/json');
             // headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-            headers.append('Access-Control-Allow-Origin', 'https://api.vk.com');
+            headers.append('Origin', 'https://api.vk.com');
             // headers.append('Api-User-Agent', 'Example/1.0');
             const options = new RequestOptions({ headers: headers});
             return this.http.get('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
