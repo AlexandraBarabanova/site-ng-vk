@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/dist'));
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://api.vk.com');
+    res.setHeader('Access-Control-Allow-Origin', 'https://vk-oauth-ng.herokuapp.com');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
