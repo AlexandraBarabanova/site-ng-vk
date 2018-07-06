@@ -3,7 +3,6 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { HttpModule } from "@angular/http";
 import {JsonpModule, Jsonp, Response} from '@angular/http';
-import { HTTP_PROVIDERS, JSONP_PROVIDERS } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FriendsComponent } from './friends/friends.component';
@@ -36,7 +35,7 @@ const appRoutes: Routes = [
   ],
   exports: [RouterModule],
   providers: [AppService],
-  bootstrap: (AppComponent, [JSONP_PROVIDERS]),
+  bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
