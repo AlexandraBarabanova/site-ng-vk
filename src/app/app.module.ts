@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { HttpModule } from "@angular/http";
-import { HttpClientModule } from '@angular/common/http';
+import {JsonpModule, Jsonp, Response} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FriendsComponent } from './friends/friends.component';
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
       // FriendsRoutingModule,
       // LoginRoutingModule,
       HttpModule,
-      HttpClientModule
+      JsonpModule
   ],
   exports: [RouterModule],
   providers: [AppService],
