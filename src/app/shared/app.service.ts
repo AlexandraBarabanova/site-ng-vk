@@ -20,8 +20,8 @@ export class AppService {
             const headers = new Headers();
             // headers.append('Access-Control-Allow-Headers', 'Content-Type');
             headers.append('Content-Type', 'application/json');
-            headers.append('Access-Control-Allow-Methods', 'GET');
-            headers.append('Access-Control-Allow-Origin', '*');
+            headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+            headers.append('Access-Control-Allow-Origin', 'https://vk-oauth-ng.herokuapp.com');
             // headers.append('Api-User-Agent', 'Example/1.0');
             const options = new RequestOptions({ headers: headers});
             return this.http.get('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
