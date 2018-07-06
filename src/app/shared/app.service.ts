@@ -16,11 +16,11 @@ export class AppService {
 
         constructor(private http: Http) {}
         public getFriends(): Promise<any> {
-            let myHeaders = new Headers({
-                'Content-Type': 'application/json',
-                'X-MyHeader': 'Hello'
-            });
-            let options = new RequestOptions({ headers: myHeaders});
+            const headers = new Headers();
+            headers.append('Access-Control-Allow-Headers', 'Content-Type');
+            headers.append('Access-Control-Allow-Methods', 'GET');
+            headers.append('Access-Control-Allow-Origin', '*');
+            const options = new RequestOptions({ headers: headers});
             return this.http.get('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
                                         '&v=5.52&access_token=' + localStorage.getItem('access_token'), options)
                 .toPromise()
