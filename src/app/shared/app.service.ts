@@ -19,13 +19,13 @@ export class AppService {
         public getFriends(): any {
             const headers = new Headers();
             // headers.append('Access-Control-Allow-Headers', 'Content-Type');
-            headers.append('Content-Type', 'application/json');
-            headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-            headers.append('Access-Control-Allow-Origin', 'https://vk-oauth-ng.herokuapp.com');
+            // headers.append('Content-Type', 'application/json');
+            // headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+            // headers.append('Access-Control-Allow-Origin', 'https://vk-oauth-ng.herokuapp.com');
             // headers.append('Api-User-Agent', 'Example/1.0');
-            const options = new RequestOptions({ headers: headers});
+            // const options = new RequestOptions({ headers: headers});
             return this.http.get('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
-                                        '&v=5.52&access_token=' + localStorage.getItem('access_token'), options)
+                                        '&v=5.52&access_token=' + localStorage.getItem('access_token'))
                 .subscribe((data: any) => {this.frined = data; });
         }
         // private handleError(error: any) {
