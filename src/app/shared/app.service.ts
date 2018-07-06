@@ -18,11 +18,12 @@ export class AppService {
         public getFriends(): Promise<any> {
             const headers = new Headers();
             headers.append('Access-Control-Allow-Headers', 'Content-Type');
+            headers.append('Content-Type', 'application/json');
             headers.append('Access-Control-Allow-Methods', 'GET');
             headers.append('Access-Control-Allow-Origin', '*');
             const options = new RequestOptions({ headers: headers});
-            return this.http.get('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
-                                        '&v=5.52&access_token=' + localStorage.getItem('access_token'), options)
+            return this.http.post('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
+                                        '&v=5.52&access_token=' + localStorage.getItem('access_token'), '{}', options)
                 .toPromise()
                 .then(res => res.json().data)
                 .then(frined => this.frined = frined)
