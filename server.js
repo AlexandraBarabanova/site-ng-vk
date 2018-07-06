@@ -27,7 +27,6 @@ app.use(function (req, res, next) {
 });
 
 app.get('/*', function(req, res) {
-    console.log(req.path);
     if (req.path.length > 1 && ['css', 'js', 'jpg'].indexOf(req.path.split('.').pop()) !== -1) {
         res.sendFile(path.join(__dirname + `/dist/site-angular-vk-oauth${req.path}`));
     } else {

@@ -18,6 +18,6 @@ export class FriendsComponent implements OnInit {
 
     ngOnInit() {
         this.friendItems = this.appService.getFriends();
-        console.log(this.friendItems);
+        // console.log(this.friendItems);
     }
 }

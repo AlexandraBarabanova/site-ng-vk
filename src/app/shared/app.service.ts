@@ -33,7 +33,7 @@ export class AppService {
         }
 
     myCallBack = function(responseJson) {
-        console.log(responseJson);
+        console.log('szgfdh', responseJson);
     };
         // private handleError(error: any) {
         //     console.log('ERROR!!!', error);
