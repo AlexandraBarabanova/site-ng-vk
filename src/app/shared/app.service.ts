@@ -21,6 +21,7 @@ export class AppService {
             headers.append('Content-Type', 'application/json');
             headers.append('Access-Control-Allow-Methods', 'GET');
             headers.append('Access-Control-Allow-Origin', '*');
+            headers.append('Api-User-Agent', 'Example/1.0');
             const options = new RequestOptions({ headers: headers});
             return this.http.post('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
                                         '&v=5.52&access_token=' + localStorage.getItem('access_token'), '{}', options)
