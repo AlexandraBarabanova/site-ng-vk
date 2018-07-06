@@ -25,7 +25,7 @@ export class AppService {
             // headers.append('Api-User-Agent', 'Example/1.0');
             const options = new RequestOptions({ headers: headers});
             return this.http.get('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
-                                        '&v=5.52&access_token=' + localStorage.getItem('access_token'))
+                                        '&v=5.52&access_token=' + localStorage.getItem('access_token'), options)
                 .subscribe((data: any) => {this.frined = data; });
         }
         // private handleError(error: any) {
