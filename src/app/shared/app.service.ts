@@ -22,6 +22,7 @@ export class AppService {
 
             // return this.http.jsonp('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
             //                             '&v=5.52&access_token=' + localStorage.getItem('access_token'), 'callback');
+            console.log('this');
             return this.jsonp.request('https://api.vk.com/method/friends.get?user_id=' + localStorage.getItem('user_id') +
                 '&v=5.52&access_token=' + localStorage.getItem('access_token') + '&callback=JSONP_CALLBACK')
                 .map(function(res: Response) {
